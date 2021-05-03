@@ -25,7 +25,7 @@ let seattle = {
     amountOfCookiesPurchased: function () {
 
         for (i = 0; i < hours.length; i++) {
-            amount = Math.ceil(randomnumber(this.min, this.max) * this.avgCookieSale);
+            amount = Math.floor(randomnumber(this.min, this.max) * this.avgCookieSale);
             this.salesPerHour.push(amount);
            this.totalPerDay += amount;
         }
@@ -35,7 +35,7 @@ let seattle = {
 
 
 toHtml : function () {
-    let theparent = document.getElementById('location1');
+    let theparent = document.getElementById('parent');
 //console.log(theparent);
 let h22 = document.createElement('h2');
 theparent.appendChild(h22);
@@ -62,7 +62,7 @@ unorderedlist.appendChild(listitems);
 //out of the object 
  function randomnumber (min, max) {
     let randomCount = Math.floor(Math.random() * (max - min + 1) + min);
-    return Math.ceil(randomCount);
+    return Math.floor(randomCount);
 }
 
 
@@ -99,7 +99,7 @@ let tokyo = {
     amountOfCookiesPurchased: function () {
 
         for (i = 0; i < hours.length; i++) {
-            amount = Math.ceil(randomnumber(this.min, this.max) * this.avgCookieSale);
+            amount = Math.floor(randomnumber(this.min, this.max) * this.avgCookieSale);
             this.salesPerHour.push(amount);
            this.totalPerDay += amount;
         }
@@ -109,7 +109,7 @@ let tokyo = {
 
 
 toHtml : function () {
-    let theparent = document.getElementById('location1');
+    let theparent = document.getElementById('parent');
 //console.log(theparent);
 let h22 = document.createElement('h2');
 theparent.appendChild(h22);
@@ -162,7 +162,7 @@ let dubai = {
     amountOfCookiesPurchased: function () {
 
         for (i = 0; i < hours.length; i++) {
-            amount = Math.ceil(randomnumber(this.min, this.max) * this.avgCookieSale);
+            amount = Math.floor(randomnumber(this.min, this.max) * this.avgCookieSale);
             this.salesPerHour.push(amount);
            this.totalPerDay += amount;
         }
@@ -172,7 +172,7 @@ let dubai = {
 
 
 toHtml : function () {
-    let theparent = document.getElementById('location1');
+    let theparent = document.getElementById('parent');
 //console.log(theparent);
 let h22 = document.createElement('h2');
 theparent.appendChild(h22);
@@ -225,7 +225,7 @@ let paris = {
     amountOfCookiesPurchased: function () {
 
         for (i = 0; i < hours.length; i++) {
-            amount = Math.ceil(randomnumber(this.min, this.max) * this.avgCookieSale);
+            amount = Math.floor(randomnumber(this.min, this.max) * this.avgCookieSale);
             this.salesPerHour.push(amount);
            this.totalPerDay += amount;
         }
@@ -235,7 +235,7 @@ let paris = {
 
 
 toHtml : function () {
-    let theparent = document.getElementById('location1');
+    let theparent = document.getElementById('parent');
 //console.log(theparent);
 let h22 = document.createElement('h2');
 theparent.appendChild(h22);
@@ -287,7 +287,7 @@ let lima = {
     amountOfCookiesPurchased: function () {
 
         for (i = 0; i < hours.length; i++) {
-            amount = Math.ceil(randomnumber(this.min, this.max) * this.avgCookieSale);
+            amount = Math.floor(randomnumber(this.min, this.max) * this.avgCookieSale);
             this.salesPerHour.push(amount);
            this.totalPerDay += amount;
         }
@@ -297,7 +297,7 @@ let lima = {
 
 
 toHtml : function () {
-    let theparent = document.getElementById('location1');
+    let theparent = document.getElementById('parent');
 //console.log(theparent);
 let h22 = document.createElement('h2');
 theparent.appendChild(h22);
