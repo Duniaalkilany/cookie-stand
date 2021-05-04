@@ -1,7 +1,5 @@
-
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm ', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-let cookieTable = document.getElementById('cookies');
-let theStoreDetailsArray = [];
+
 //global random function 
 
 function randomnumber (min, max) {
@@ -9,20 +7,20 @@ function randomnumber (min, max) {
     return Math.floor(randomCount);
 }
 
+let cookieTable = document.getElementById('cookies');
 
-
-
+let theStoreDetailsArray = [];
 // build constructor 
 function StoreDetails( location , min , max , avgCookieSale , randCustomerPerHour, salesPerHour , totalPerDay ){
 this.location = location;
 this.min = min;
 this.max = max;
 this.avgCookieSale = avgCookieSale;
-this.randCustomerPerHour = [];
-this.salesPerHour = [];
-this.totalPerDay = 0;
-//theStoreDetailsArray.push(this);
-
+this.randCustomerPerHour = randCustomerPerHour;
+this.salesPerHour = salesPerHour;
+this.totalPerDay = totalPerDay;
+theStoreDetailsArray.push(this);
+console.log(theStoreDetailsArray);
 }
 
 
@@ -44,52 +42,16 @@ StoreDetails.prototype.amountOfCookiesPurchased =function () {
         this.salesPerHour.push(amount);
        this.totalPerDay += amount;
     }
-    
+    //console.log(this.salesPerHour);
 
 };
 
-//render
-StoreDetails.prototype.render= function (){
-    let cookieTable = document.getElementById('cookies');
-    //cookieTable.appendChild(trElement);
 
 
-    this.randomCustomers
-    this.amountOfCookiesPurchased();
-    //let cookieTable = document.getElementById('cookies');
-    
-//create tr
-//for(j=0 ; j<theStoreDetailsArray.length ; j++){
-let trElement =document.createElement('tr');
-let tdElement = document.createElement('td');
-tdElement.textContent = this.location;
-trElement.appendChild(tdElement);
-
-cookieTable.appendChild(trElement);
-//trElement.appendChild(thElement);
-//let tdElement1=document.createElement('td');
-//trElement.appendChild(tdElement1)
-//tdElement1.textContent=this.location
-//td for locations 
-//let tdElement1= document.createElement('td');
-//trElement.appendChild(tdElement1);
- // loop over array and create other td's
-for (var i=0;i<hours.length;i++){
-let tdElement2 = document.createElement('td');
-tdElement2.textContent=this.salesPerHour[i];
-trElement.appendChild(tdElement2);
-    }
-    
-//total
-let tdElement3 = document.createElement('td');
-tdElement3.textContent=this.totalPerDay
-trElement.appendChild(tdElement3);
-
-//append 
 
 
-theStoreDetailsArray.push(this);
-};
+
+
 
 //create  function for header row of table with hours 
 function headerRow (){
@@ -120,25 +82,47 @@ function headerRow (){
 headerRow();
 
 
+StoreDetails.prototype.render= function (){
+    this.amountOfCookiesPurchased();
+    let cookieTable = document.getElementById('cookies');
+    
+//create tr
+for(j=0 ; j<theStoreDetailsArray.length ; j++){
+let trElement =document.createElement('tr');
+cookieTable.appendChild(trElement);
+let tdElement1=document.createElement('td');
+trElement.appendChild(tdElement1)
+tdElement1.textContent=theStoreDetailsArray[j].location
+//td for locations 
+//let tdElement1= document.createElement('td');
+//trElement.appendChild(tdElement1);
+// data
+for (var i=0;j<hours.length;i++){
+let tdElement2 = document.createElement('td');
+trElement.appendChild(tdElement2);
+tdElement2.textContent=theStoreDetailsArray[j].salesPerHour[i]
+    }
+    
+//total
+let tdElement3 = document.createElement('td');
+trElement.appendChild(tdElement3);
+tdElement3.textContent=theStoreDetailsArray[j].totalPerDay}
+};
 
 
 let seattle= new StoreDetails ('Seattle',23,65,6.3,[],[],0);
-
-
+seattle.amountOfCookiesPurchased();
+seattle.render();
 
 let tokyo = new StoreDetails ('Tokyo',3,24,1.2,[],[],0);
-
-
+tokyo.amountOfCookiesPurchased();
+tokyo.render();
 let dubai = new StoreDetails ('Dubai',11,38,3.7,[],[],0);
-
-
-let paris = new StoreDetails ('Paris',20,38,2.3,[],[],0);
-
-
-let lima = new StoreDetails ('Lima',2,16,4.6,[],[],0);
-
-
-seattle.render();tokyo.render();
+dubai.amountOfCookiesPurchased();
 dubai.render();
+let paris = new StoreDetails ('Paris',20,38,2.3,[],[],0);
+paris.amountOfCookiesPurchased();
 paris.render();
+let lima = new StoreDetails ('Lima',2,16,4.6,[],[],0);
+lima.amountOfCookiesPurchased();
 lima.render();
