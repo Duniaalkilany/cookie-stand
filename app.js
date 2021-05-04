@@ -138,7 +138,8 @@ let paris = new StoreDetails ('Paris',20,38,2.3,[],[],0);
 let lima = new StoreDetails ('Lima',2,16,4.6,[],[],0);
 
 
-seattle.render();tokyo.render();
+seattle.render();
+tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
