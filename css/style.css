@@ -7,6 +7,8 @@ table , th , td {
 }
 
 
+
+
  
 
 
@@ -122,7 +124,17 @@ li div p {
 }
 
 
+#nav {
+  width: 960px;
+  margin:0 0;
+}
 
+
+#a {
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: underline;
+}
 
 
 
@@ -151,11 +163,12 @@ footer{
   
   clear: both;
 background-color:#292927 ;
-height: 120px;;
+height: 200px;;
 margin-top:30px;}
 
 footer img {
   float: left;
+  margin-right: 20px;
 }
 footer ul {
   list-style-type: style circle;
@@ -168,46 +181,11 @@ footer ul li {
   font-weight: bolder;
 color: white;
 text-decoration: underline;
-text-align: center;
-font-size:x-large ;
+text-align:left;
+font-size:x-large;
 }
 
 
 
 
-
-/*body{
-    line-height: 4;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #fdac26;
-   
-    background-size: 22px 22px;
-}
-
-
-  header h1 { 
-    font-weight: bolder;
-    
-    margin: 80px;
-    font-family: 'Girassol', cursive;
-    color: #6b3d0b;
-    font-size: xx-large;
-    text-align: center;
-    background-color: rgb(241, 228, 228);
-}
-
-main img {
-   
-    margin-left: 250px;
-    margin-right: 40px;
-    width: 50%;
-  }
-
-
-  main nav ul li{
-
-    display: inline-block;
-  }
 
