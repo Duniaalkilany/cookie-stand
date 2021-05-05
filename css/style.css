@@ -1,3 +1,20 @@
+
+
+table , th , td {
+  border:2px solid black ;
+  border-collapse: collapse;
+
+}
+
+
+ 
+
+
+
+
+
+
+
 body{
     line-height: 4;
     display: block;
