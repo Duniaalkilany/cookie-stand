@@ -24,7 +24,36 @@
     <div id="parent">
   
      </div>
-    
-</body>
+<!-------------create form ------------------->
+<form id="cookieStandForm">
+    <fieldset>
+        <legend>Add New Cookie Stand </legend>
+        <ul>
+            <li>
+                <label for="location">location</label>
+                <input type="text" name="location" id="location" >
+            </li>
+            <li>
+                <label for="min">Min Cus Per Hour </label>
+                <input type="number" name="min" id="min" >
+            </li>
+            <li>
+                <label for="max">Max Cus Per Hour</label>
+                <input type="number" name="max" id="max">
+            </li>
+            <li>
+                <label for="avgCookieSale">Avg Cookie Per Sale</label>
+                <input type="number" name="avgCookieSale" id="avgCookieSale">
+
+            </li>
+            <li>
+                <button>Add New Cookie Stand</button>
+            </li>
+        </ul>
+        
+    </fieldset>
+</form>
+
 <script src="app.js"></script>
+</body>
 </html>
