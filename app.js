@@ -196,7 +196,7 @@ let min = event.target.min.value;
 let max = event.target.max.value;
 let avgCookieSale = event.target.avgCookieSale.value
 
-let newStandAdd = new  StoreDetails (location,min,max,avgCookieSale);
+let newStandAdd = new  StoreDetails (location,min,max,avgCookieSale,);
 
 table.innerHTML = '';
 salesPerHour = [];
