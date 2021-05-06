@@ -1,9 +1,9 @@
 
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm ', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-//let cookieTable = document.getElementById('cookies');
 let theStoreDetailsArray = [];
+//access the form so we can attach an event listener
+let cookieStandForm = document.getElementById('cookieStandForm');
 //global random function 
-
 function randomnumber (min, max) {
     let randomCount = Math.floor(Math.random() * (max - min + 1) + min);
     return Math.floor(randomCount);
@@ -183,6 +183,34 @@ let totalEachDay =0;
     
 };
 footerRow();
+
+//
+//add event listener, listening for event, put at bottom for code readability
+cookieStandForm.addEventListener('submit', addNewCookieStand);
+
+function addNewCookieStand (event){
+    event.preventDefault();
+//assigning new value to property assigned to current property; 
+let location = event.target.location.value;
+let min = event.target.min.value;
+let max = event.target.max.value;
+let avgCookieSale = event.target.avgCookieSale.value
+
+let newStandAdd = new  StoreDetails (location,min,max,avgCookieSale);
+
+table.innerHTML = '';
+salesPerHour = [];
+totalPerDay = 0;
+newStandAdd.randomCustomers();
+newStandAdd.amountOfCookiesPurchased();
+
+headerRow();
+newStandAdd .render();
+footerRow();
+theStoreDetailsArray.push(newStandAdd);
+
+
+}
 
 
 
