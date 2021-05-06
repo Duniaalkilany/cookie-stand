@@ -198,15 +198,15 @@ let avgCookieSale = event.target.avgCookieSale.value
 
 let newStandAdd = new  StoreDetails (location,min,max,avgCookieSale);
 
-table.innerHTML = '';
+//table.innerHTML = '';
 salesPerHour = [];
 totalPerDay = 0;
 newStandAdd.randomCustomers();
 newStandAdd.amountOfCookiesPurchased();
-
-headerRow();
-newStandAdd .render();
-footerRow();
+theStoreDetailsArray.push(newStandAdd);
+//headerRow();
+newStandAdd.render();
+//footerRow();
 theStoreDetailsArray.push(newStandAdd);
 
 
