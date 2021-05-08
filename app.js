@@ -216,7 +216,7 @@ let avgCookieSale = parseInt(event.target.avgCookieSale.value)
 
 //creates an instance of the newStore object
 
-let newStandAdd = new  StoreDetails (location,min,max,avgCookieSale,);
+
 
 
 let newStandAdd = new StoreDetails ( location, min ,  max, avgCookieSale ,[],[],0 );
