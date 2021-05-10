@@ -224,7 +224,7 @@ let newStandAdd = new StoreDetails ( location, min ,  max, avgCookieSale ,[],[],
 newStandAdd.render();
 footerRow();
 
-document.getElementById('cookieStandForm'),reset();
+document.getElementById("cookieStandForm").reset();
 
 };
 
